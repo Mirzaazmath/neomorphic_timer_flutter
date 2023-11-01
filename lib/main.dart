@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:neomorphic_timer_flutter/screens/home_screen.dart';
 void main(){
+
+  WidgetsFlutterBinding.ensureInitialized();
+  //  Setting the app only in on Orientation
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]);
   runApp(MyApp());
 }
 class MyApp extends StatelessWidget {
